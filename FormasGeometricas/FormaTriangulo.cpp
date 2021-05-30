@@ -1,18 +1,29 @@
 #include "FormaTriangulo.hpp"
+#include <math.h>
 
-void FormaTriangulo::calcularArea()
+void FormaTriangulo::setLadoUm(float l)
 {
-	cout << area << " eh a area do triangulo!\n";
+	l1 = l;
 }
-void FormaTriangulo::setArea()
+
+void FormaTriangulo::setLadoDois(float l)
 {
-	area = (base * altura) / 2;
+	l2 = l;
 }
-void FormaTriangulo::setAltura(double a)
+
+void FormaTriangulo::setLadoTres(float l)
 {
-	altura = a;
+	l3 = l;
 }
-void FormaTriangulo::setBase(double b)
+
+void FormaTriangulo::calculaArea()
 {
-	base = b;
+	float perimetro = (l1 + l2 + l3) / 2;
+	area = sqrt (perimetro * (perimetro - l1) * (perimetro - l2) * (perimetro - l3));
+	
+	cout << " TRIANGULO " << endl;
+	cout << " Lado 1: " << l1 << " cm " << endl;
+	cout << " Lado 2: " << l2 << " cm " << endl;
+	cout << " Lado 3: " << l3 << " cm " << endl;
+	cout << " Área: " << area << " cm³ " << endl << endl;
 }

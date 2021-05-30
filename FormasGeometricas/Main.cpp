@@ -1,37 +1,30 @@
-#include "FormaCirculo.hpp"
-#include "FormaRetangulo.hpp"
+#include <iostream>
+#include <locale.h>
 #include "FormaTriangulo.hpp"
+#include "FormaRetangulo.hpp"
+#include "FormaCirculo.hpp"
+#include "FormaGeometrica.hpp"
+
+using namespace std;
 
 int main()
 {
-  FormaCirculo a;
-  FormaRetangulo b;
-  FormaTriangulo c;
+	setlocale (LC_ALL, "português");
+	
+    FormaCirculo c;
+    c.setRaio(20);
+    c.calculaArea();
+	    
+    FormaRetangulo r;
+    r.setBase(10);
+    r.setAltura(2);
+    r.calculaArea();
     
-  a.setNomeForma("Circulo");
-  a.setArea();
+    FormaTriangulo t;
+    t.setLadoUm(9);
+    t.setLadoDois(7);
+    t.setLadoTres(14);
+    t.calculaArea();
     
-  b.setEspecie("Gato");
-  b.setArea("Garfield");
-  b.setNumPatas(4);
-    
-  c.setEspecie("Papagaio");
-  c.setNome("Zeh Carioca");
-    
-  a.fazerBarulho();
-  a.movimentar();
-  a.comer();
-  cout << endl;
-    
-  b.fazerBarulho();
-  b.movimentar();
-  b.comer();
-  cout << endl;
-    
-  c.fazerBarulho();
-  c.movimentar();
-  c.comer();
-  cout << endl;
-    
-  return  0 ;
+    return  0;       
 }

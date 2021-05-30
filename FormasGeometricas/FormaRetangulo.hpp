@@ -1,20 +1,18 @@
-#include "Formas.hpp"
+#include "FormaGeometrica.hpp"
 
 #ifndef FormaRetangulo_hpp
 #define FormaRetangulo_hpp
 
-class FormaRetangulo : public Formas
+class FormaRetangulo : public FormaGeometrica
 {
-public:
-	void calcularArea();
-	void setArea();
-	void setAltura(double a);
-	void setBase(double b);
+	public:
+		void setBase(float b);
+		void setAltura(float a);
+		void calculaArea();
 	
-private:
-	double altura;
-	double base;
-	float area;
+	private:
+		float base;
+		float altura;
 };
 
 #endif

@@ -1,18 +1,20 @@
 #include "FormaRetangulo.hpp"
 
-void FormaRetangulo::calcularArea()
+void FormaRetangulo::setBase(float b)
 {
-	cout << area << " eh a area do retangulo!\n";
+	base = b;
 }
-void FormaRetangulo::setArea()
-{
-	area = base * altura;
-}
-void FormaRetangulo::setAltura(double a)
+
+void FormaRetangulo::setAltura(float a)
 {
 	altura = a;
 }
-void FormaRetangulo::setBase(double b)
+
+void FormaRetangulo::calculaArea()
 {
-	base = b;
+	area = base * altura;
+	cout << " RETANGULO " << endl;
+	cout << " Base: " << base << " cm " << endl;
+	cout << " Altura: " << altura << " cm " << endl;
+	cout << " Área: " << area << " cm² " << endl << endl;
 }
