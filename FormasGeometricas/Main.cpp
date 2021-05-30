@@ -12,18 +12,18 @@ int main()
 	setlocale (LC_ALL, "português");
 	
     FormaCirculo c;
-    c.setRaio(20);
+    c.setRaio(10);
     c.calculaArea();
 	    
     FormaRetangulo r;
-    r.setBase(10);
-    r.setAltura(2);
+    r.setBase(20);
+    r.setAltura(10);
     r.calculaArea();
     
     FormaTriangulo t;
-    t.setLadoUm(9);
-    t.setLadoDois(7);
-    t.setLadoTres(14);
+    t.setLadoUm(5);
+    t.setLadoDois(5);
+    t.setLadoTres(5);
     t.calculaArea();
     
     return  0;       
